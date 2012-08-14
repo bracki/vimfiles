@@ -86,5 +86,6 @@ augroup filetypedetect
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
 augroup END 
 
+let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
 
 call pathogen#infect()
