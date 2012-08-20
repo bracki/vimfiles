@@ -87,4 +87,4 @@ augroup filetypedetect
 augroup END 
 
 
-call pathogen#runtime_append_all_bundles() 
+call pathogen#infect()
