@@ -1,3 +1,21 @@
+" enter vim mode
+set nocompatible
+" set up Vundle (https://github.com/gmarik/vundle)
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" list of plugins installed by Vundle
+Bundle 'gmarik/vundle'
+Bundle 'molokai'
+Bundle 'ack.vim'
+Bundle 'vim-flake8'
+Bundle 'ctrlp.vim'
+Bundle 'Syntastic'
+" end of Vundle setup
+filetype plugin indent on
+
+" -------------------------------------------
+
 let mapleader = ","
 let maplocalleader = ","
 set t_Co=256
@@ -88,4 +106,3 @@ augroup END
 
 let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
 
-call pathogen#infect()
