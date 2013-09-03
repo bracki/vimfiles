@@ -11,6 +11,12 @@ Bundle 'ack.vim'
 Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
 Bundle 'Syntastic'
+Bundle 'bling/vim-airline'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'TwitVim'
+Bundle 'taglist.vim'
+Bundle 'tpope/vim-surround'
+
 " end of Vundle setup
 filetype plugin indent on
 
@@ -67,9 +73,11 @@ nnoremap <silent> <F5> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " --------------------
-"  " Command-T
-"  " --------------------
-let g:CommandTMatchWindowAtTop=1
+" CtrlP
+" --------------------
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20'
 
 " Vim settings for cnext etc.
 map <F2>  :cprev<CR>
