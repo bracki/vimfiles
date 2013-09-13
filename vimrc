@@ -16,6 +16,14 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'TwitVim'
 Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'mlafeldt/vim-puppet'
+
+" Clojure Plugins
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-fireplace'
+Bundle 'rainbow_parentheses.vim'
 
 " end of Vundle setup
 filetype plugin indent on
@@ -31,12 +39,16 @@ syntax on
 set ruler
 set showcmd
 set hlsearch
-
 " Allow backspace over everything in insert mode
 set backspace=indent,eol,start
 
+" Make vim-airline work
+set laststatus=2
+
+set modeline
+set modelines=5
+
 " Stuff for auto indent and different filetypes
-filetype plugin indent on
 augroup vimrc
 au!
 autocmd FileType ant setlocal sw=2 sts=2 et
@@ -57,6 +69,7 @@ autocmd FileType eruby setlocal sw=2 sts=2 et
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
+autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
 augroup END
 
 " --------------------
@@ -88,7 +101,27 @@ map <F3>  :cnext<CR>
 " --------------------
 let g:clj_highlight_builtins = 1
 let g:clj_paren_rainbow = 10
-
+let g:rbpt_colorpairs = [
+  \[ 'yellow'      , 'orange1'],
+  \[ 'green'       , 'yellow1'],
+  \[ 'cyan'        , 'greenyellow'],
+  \[ 'magenta'     , 'green1'],
+  \[ 'red'         , 'springgreen1'],
+  \[ 'yellow'      , 'cyan1'],
+  \[ 'green'       , 'slateblue1'],
+  \[ 'cyan'        , 'magenta1'],
+  \[ 'magenta'     , 'purple1'],
+  \[ 'darkyellow'  , 'orangered3'],
+  \[ 'darkgreen'   , 'orange2'],
+  \[ 'blue'        , 'yellow3'],
+  \[ 'darkmagenta' , 'olivedrab4'],
+  \[ 'red'         , 'green4'],
+  \[ 'darkyellow'  , 'paleturquoise3'],
+  \[ 'darkgreen'   , 'deepskyblue4'],
+  \[ 'blue'        , 'darkslateblue'],
+  \[ 'darkmagenta' , 'darkviolet'],
+\]
+let g:rbpt_max = 16
 " --------------------
 " Stuff for Python
 "
