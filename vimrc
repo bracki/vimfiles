@@ -17,7 +17,11 @@ Bundle 'TwitVim'
 Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-fugitive'
 Bundle 'mlafeldt/vim-puppet'
+Bundle 'honza/dockerfile.vim'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'elzr/vim-json'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
@@ -48,6 +52,10 @@ set laststatus=2
 set modeline
 set modelines=5
 
+set nu
+set cursorline
+set cursorcolumn
+
 " Stuff for auto indent and different filetypes
 augroup vimrc
 au!
@@ -67,6 +75,7 @@ autocmd FileType jsp setlocal sw=2 sts=2 et
 autocmd FileType html setlocal sw=2 sts=2 et 
 autocmd FileType eruby setlocal sw=2 sts=2 et 
 autocmd FileType xhtml setlocal sw=2 sts=2 et
+autocmd FileType json setlocal sw=2 sts=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -146,4 +155,4 @@ augroup filetypedetect
 augroup END 
 
 let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
-
+let g:airline_powerline_fonts = 1
