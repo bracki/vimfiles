@@ -24,6 +24,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Jimdo/vim-spec-runner'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
