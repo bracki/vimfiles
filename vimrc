@@ -22,12 +22,22 @@ Bundle 'mlafeldt/vim-puppet'
 Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
+Bundle 'kchmck/vim-coffee-script'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-leiningen'
+Bundle 'tpope/vim-projectionist'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-fireplace'
 Bundle 'rainbow_parentheses.vim'
+
+" SnipMate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 " end of Vundle setup
 filetype plugin indent on
@@ -70,6 +80,7 @@ autocmd FileType ruby setlocal sw=2 sts=2 et tw=72
 autocmd FileType cucumber setlocal sw=2 sts=2 et 
 autocmd FileType java setlocal sw=2 sts=2 et 
 autocmd FileType javascript setlocal sw=2 sts=2 et 
+autocmd FileType coffee setlocal sw=2 sts=2 et 
 autocmd FileType htmldjango setlocal sw=4 sts=4 et 
 autocmd FileType jsp setlocal sw=2 sts=2 et 
 autocmd FileType html setlocal sw=2 sts=2 et 
