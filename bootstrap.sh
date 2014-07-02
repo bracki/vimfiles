@@ -4,7 +4,10 @@ set -e
 
 install_vimrc() {
     echo "--->  Installing vimrc"
-    ln -snf vimrc $HOME/.vimrc
+
+    local abspath=$(cd "$(dirname "$0")"; pwd)
+
+    ln -snf "$abspath/vimrc" $HOME/.vimrc
 }
 
 install_vim_plugins() {
