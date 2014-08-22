@@ -23,6 +23,7 @@ Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'Jimdo/vim-spec-runner'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
@@ -170,3 +171,8 @@ augroup END
 
 let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
 let g:airline_powerline_fonts = 1
+
+" Anti fuck up spec runner
+nnoremap <leader>s :RunTestFile<cr>
+nnoremap <leader>S :RunNearestTest<cr>
+nnoremap <leader>a :RunAllTests<cr>
