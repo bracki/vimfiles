@@ -12,7 +12,7 @@ Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
 Bundle 'Syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'Blackrush/vim-gocode'
+Bundle 'fatih/vim-go'
 Bundle 'TwitVim'
 Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
@@ -176,3 +176,6 @@ let g:airline_powerline_fonts = 1
 nnoremap <leader>s :RunTestFile<cr>
 nnoremap <leader>S :RunNearestTest<cr>
 nnoremap <leader>a :RunAllTests<cr>
+
+" Do not automagically install Go stuff 
+let g:go_disable_autoinstall = 1
