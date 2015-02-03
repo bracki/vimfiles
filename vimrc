@@ -37,7 +37,7 @@ Bundle 'rainbow_parentheses.vim'
 " SnipMate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
 " end of Vundle setup
@@ -88,6 +88,7 @@ autocmd FileType html setlocal sw=2 sts=2 et
 autocmd FileType eruby setlocal sw=2 sts=2 et 
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
+autocmd FileType groovy setlocal sw=4 sts=4 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -179,3 +180,5 @@ nnoremap <leader>a :RunAllTests<cr>
 
 " Do not automagically install Go stuff 
 let g:go_disable_autoinstall = 1
+
+let g:go_fmt_command = "goimports"
