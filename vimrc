@@ -25,6 +25,7 @@ Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Jimdo/vim-spec-runner'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'chase/vim-ansible-yaml'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
@@ -40,6 +41,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+Bundle 'jpalardy/vim-slime'
 
 " end of Vundle setup
 filetype plugin indent on
@@ -183,3 +185,9 @@ nnoremap <leader>a :RunAllTests<cr>
 let g:go_disable_autoinstall = 1
 
 let g:go_fmt_command = "goimports"
+
+" vim slime
+let g:slime_target = "tmux"
+
+" tmux
+let g:tmux_navigator_save_on_switch = 1
