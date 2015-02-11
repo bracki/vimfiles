@@ -191,3 +191,7 @@ let g:slime_target = "tmux"
 
 " tmux
 let g:tmux_navigator_save_on_switch = 1
+
+" disable Background Color Erase
+" https://sunaku.github.io/vim-256color-bce.html
+set t_ut=
