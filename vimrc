@@ -188,6 +188,7 @@ let g:go_fmt_command = "goimports"
 
 " vim slime
 let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "0.1"}
 
 " tmux
 let g:tmux_navigator_save_on_switch = 1
