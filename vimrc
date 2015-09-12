@@ -92,6 +92,7 @@ autocmd FileType eruby setlocal sw=2 sts=2 et
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
 autocmd FileType groovy setlocal sw=4 sts=4 et
+autocmd FileType yaml setlocal sw=2 sts=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
