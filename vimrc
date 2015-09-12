@@ -81,14 +81,14 @@ autocmd FileType python setlocal sw=4 sts=4 et tw=72
 autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType rst setlocal sw=4 sts=4 et
 autocmd FileType ruby setlocal sw=2 sts=2 et tw=72
-autocmd FileType cucumber setlocal sw=2 sts=2 et 
-autocmd FileType java setlocal sw=2 sts=2 et 
-autocmd FileType javascript setlocal sw=2 sts=2 et 
-autocmd FileType coffee setlocal sw=2 sts=2 et 
-autocmd FileType htmldjango setlocal sw=4 sts=4 et 
-autocmd FileType jsp setlocal sw=2 sts=2 et 
-autocmd FileType html setlocal sw=2 sts=2 et 
-autocmd FileType eruby setlocal sw=2 sts=2 et 
+autocmd FileType cucumber setlocal sw=2 sts=2 et
+autocmd FileType java setlocal sw=2 sts=2 et
+autocmd FileType javascript setlocal sw=2 sts=2 et
+autocmd FileType coffee setlocal sw=2 sts=2 et
+autocmd FileType htmldjango setlocal sw=4 sts=4 et
+autocmd FileType jsp setlocal sw=2 sts=2 et
+autocmd FileType html setlocal sw=2 sts=2 et
+autocmd FileType eruby setlocal sw=2 sts=2 et
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
 autocmd FileType groovy setlocal sw=4 sts=4 et
@@ -169,9 +169,9 @@ map <silent><C-Right> <C-]>
 " twitvim
 let twitvim_count = 100
 
-augroup filetypedetect 
-  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
-augroup END 
+augroup filetypedetect
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+augroup END
 
 let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
 let g:airline_powerline_fonts = 1
@@ -181,7 +181,7 @@ nnoremap <leader>s :RunTestFile<cr>
 nnoremap <leader>S :RunNearestTest<cr>
 nnoremap <leader>a :RunAllTests<cr>
 
-" Do not automagically install Go stuff 
+" Do not automagically install Go stuff
 let g:go_disable_autoinstall = 1
 
 let g:go_fmt_command = "goimports"
