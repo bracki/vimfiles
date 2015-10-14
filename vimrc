@@ -11,6 +11,7 @@ Bundle 'ack.vim'
 Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
 Bundle 'Syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'fatih/vim-go'
 Bundle 'TwitVim'
@@ -39,6 +40,8 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+
+Bundle "vim-prometheus"
 
 " end of Vundle setup
 filetype plugin indent on
