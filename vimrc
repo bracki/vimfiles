@@ -7,7 +7,6 @@ call vundle#rc()
 " list of plugins installed by Vundle
 Bundle 'gmarik/vundle'
 Bundle 'molokai'
-Bundle 'ack.vim'
 Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
 Bundle 'Syntastic'
@@ -41,7 +40,10 @@ Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
+Bundle "wookiehangover/jshint.vim"
 Bundle "vim-prometheus"
+
+Bundle "ag.vim"
 
 " end of Vundle setup
 filetype plugin indent on
@@ -92,6 +94,7 @@ autocmd FileType eruby setlocal sw=2 sts=2 et
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
 autocmd FileType groovy setlocal sw=4 sts=4 et
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
