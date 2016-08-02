@@ -10,11 +10,19 @@ install_vimrc() {
     ln -snf "$abspath/vimrc" $HOME/.vimrc
 }
 
+install_tmux_conf() {
+    echo "--->  Installing tmux.conf"
+
+    local abspath=$(cd "$(dirname "$0")"; pwd)
+
+    ln -snf "$abspath/tmux.conf" $HOME/.tmux.conf
+}
+
 install_vim_plugins() {
     echo "--->  Installing Vim plugins"
 
     local vundle="$HOME/.vim/bundle/vundle"
-    if [[ -d "$vundle" ]]; then
+    if [ -d "$vundle" ]; then
         (cd "$vundle"; git pull)
     else
         mkdir -p "$vundle"
@@ -25,5 +33,6 @@ install_vim_plugins() {
 }
 
 echo "About to do the works...."
+install_tmux_conf
 install_vimrc
 install_vim_plugins

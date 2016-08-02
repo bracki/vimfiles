@@ -24,6 +24,8 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Jimdo/vim-spec-runner'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'chase/vim-ansible-yaml'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
@@ -39,6 +41,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+Bundle 'jpalardy/vim-slime'
 
 Bundle "wookiehangover/jshint.vim"
 Bundle "vim-prometheus"
@@ -188,3 +191,17 @@ nnoremap <leader>a :RunAllTests<cr>
 let g:go_disable_autoinstall = 1
 
 let g:go_fmt_command = "goimports"
+
+" vim slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "0.1"}
+
+" tmux
+let g:tmux_navigator_save_on_switch = 1
+
+" disable Background Color Erase
+" https://sunaku.github.io/vim-256color-bce.html
+set t_ut=
+
+" remove trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
