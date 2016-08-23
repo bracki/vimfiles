@@ -18,7 +18,6 @@ Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
-Bundle 'mlafeldt/vim-puppet'
 Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
@@ -95,7 +94,7 @@ autocmd FileType groovy setlocal sw=4 sts=4 et
 autocmd FileType yaml setlocal sw=2 sts=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
-autocmd FileType ruby,python,puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType ruby,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 augroup END
 
 " --------------------
