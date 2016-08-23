@@ -162,14 +162,6 @@ let g:rbpt_max = 16
 " Stuff for Python
 "
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-	if os.path.isdir(p):
-		vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
 set tags+=$HOME/.vim/tags/python.ctags
 map <silent><C-Left> <C-T>
 map <silent><C-Right> <C-]>
