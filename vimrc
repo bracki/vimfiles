@@ -25,9 +25,12 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'Jimdo/vim-spec-runner'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'chase/vim-ansible-yaml'
+Bundle 'stephpy/vim-yaml'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-sexp'
+" Bundle 'paredit.vim'
 Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-leiningen'
 Bundle 'tpope/vim-projectionist'
@@ -42,7 +45,11 @@ Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 Bundle 'jpalardy/vim-slime'
 
+" Elm Plugins
+Bundle "lambdatoast/elm.vim"
+
 " end of Vundle setup
+
 filetype plugin indent on
 
 " -------------------------------------------
@@ -92,6 +99,7 @@ autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
 autocmd FileType groovy setlocal sw=4 sts=4 et
 autocmd FileType yaml setlocal sw=2 sts=2 et
+autocmd FileType elm setlocal sw=2 sts=2 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -197,5 +205,14 @@ let g:tmux_navigator_save_on_switch = 1
 " https://sunaku.github.io/vim-256color-bce.html
 set t_ut=
 
+" json always show double quotes
+let g:vim_json_syntax_conceal = 0
+
 " remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
+
+" elm shortcuts
+nnoremap <leader>el :ElmEvalLine<CR>
+vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+nnoremap <leader>em :ElmMakeCurrentFile<CR>
+
