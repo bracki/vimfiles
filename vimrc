@@ -2,7 +2,7 @@
 set nocompatible
 " set up Vundle (https://github.com/gmarik/vundle)
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " list of plugins installed by Vundle
 Bundle 'gmarik/vundle'
