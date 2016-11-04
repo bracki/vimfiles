@@ -22,8 +22,6 @@ Bundle 'mlafeldt/vim-puppet'
 Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Jimdo/vim-spec-runner'
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
@@ -37,7 +35,6 @@ Bundle 'rainbow_parentheses.vim'
 " SnipMate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
 Bundle "wookiehangover/jshint.vim"
