@@ -77,6 +77,7 @@ autocmd FileType sh setlocal sw=4 sts=4 et
 autocmd FileType bash setlocal sw=4 sts=4 et
 autocmd FileType xml setlocal sw=2 sts=2 et
 autocmd FileType python setlocal sw=4 sts=4 et tw=72
+autocmd FileType erlang setlocal sw=4 sts=4 et tw=72
 autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType rst setlocal sw=4 sts=4 et
 autocmd FileType ruby setlocal sw=2 sts=2 et tw=72
