@@ -42,6 +42,14 @@ Bundle "vim-prometheus"
 
 Bundle "ag.vim"
 
+Bundle "leafgarland/typescript-vim"
+
+Bundle "elmcast/elm-vim"
+
+" Terraform
+Bundle "hashivim/vim-terraform"
+let g:terraform_fmt_on_save=1
+
 " end of Vundle setup
 filetype plugin indent on
 
@@ -186,3 +194,9 @@ nnoremap <leader>a :RunAllTests<cr>
 let g:go_disable_autoinstall = 1
 
 let g:go_fmt_command = "goimports"
+
+" elm specific settings
+let g:elm_format_autosave = 1
+
+
+set shell=/bin/zsh
