@@ -171,6 +171,7 @@ for p in sys.path:
 		vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
 set tags+=$HOME/.vim/tags/python.ctags
+let g:syntastic_python_flake8_args='--ignore=E501'
 map <silent><C-Left> <C-T>
 map <silent><C-Right> <C-]>
 
@@ -191,11 +192,9 @@ nnoremap <leader>a :RunAllTests<cr>
 
 " Do not automagically install Go stuff 
 let g:go_disable_autoinstall = 1
-
 let g:go_fmt_command = "goimports"
 
 " elm specific settings
 let g:elm_format_autosave = 1
-
 
 set shell=/bin/zsh
