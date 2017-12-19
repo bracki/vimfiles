@@ -49,6 +49,9 @@ Bundle "elmcast/elm-vim"
 Bundle "hashivim/vim-terraform"
 let g:terraform_fmt_on_save=1
 
+" Go Present
+Bundle "corylanou/vim-present"
+
 " end of Vundle setup
 filetype plugin indent on
 
