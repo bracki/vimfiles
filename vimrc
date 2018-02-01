@@ -52,6 +52,9 @@ let g:terraform_fmt_on_save=1
 " Go Present
 Bundle "corylanou/vim-present"
 
+" Jsonnet
+Plugin 'google/vim-jsonnet'
+
 " end of Vundle setup
 filetype plugin indent on
 
