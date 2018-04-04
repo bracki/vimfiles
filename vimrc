@@ -22,7 +22,6 @@ Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'Jimdo/vim-spec-runner'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'stephpy/vim-yaml'
@@ -47,6 +46,21 @@ Bundle 'jpalardy/vim-slime'
 
 " Elm Plugins
 Bundle "lambdatoast/elm.vim"
+
+" Ruby Plugins
+Bundle 'thoughtbot/vim-rspec'
+
+Bundle 'hashivim/vim-terraform'
+
+" Elixir
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+
+" Ruby
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-endwise'
+Bundle 'ngmy/vim-rubocop'
+
 
 " end of Vundle setup
 
@@ -86,7 +100,7 @@ autocmd FileType xml setlocal sw=2 sts=2 et
 autocmd FileType python setlocal sw=4 sts=4 et tw=72
 autocmd FileType php setlocal sw=4 sts=4 et
 autocmd FileType rst setlocal sw=4 sts=4 et
-autocmd FileType ruby setlocal sw=2 sts=2 et tw=72
+autocmd FileType ruby setlocal ai sw=2 sts=2 et
 autocmd FileType cucumber setlocal sw=2 sts=2 et
 autocmd FileType java setlocal sw=2 sts=2 et
 autocmd FileType javascript setlocal sw=2 sts=2 et
@@ -94,12 +108,13 @@ autocmd FileType coffee setlocal sw=2 sts=2 et
 autocmd FileType htmldjango setlocal sw=4 sts=4 et
 autocmd FileType jsp setlocal sw=2 sts=2 et
 autocmd FileType html setlocal sw=2 sts=2 et
-autocmd FileType eruby setlocal sw=2 sts=2 et
 autocmd FileType xhtml setlocal sw=2 sts=2 et
 autocmd FileType json setlocal sw=2 sts=2 et
 autocmd FileType groovy setlocal sw=4 sts=4 et
 autocmd FileType yaml setlocal sw=2 sts=2 et
 autocmd FileType elm setlocal sw=2 sts=2 et
+autocmd FileType tf setlocal sw=4 sts=4 et
+"autocmd FileType go setlocal sw=4 sts=4 et
 autocmd BufNewFile,BufRead Capfile setf ruby
 autocmd BufNewFile,BufRead Vagrantfile setf ruby
 autocmd FileType ruby,python autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -165,6 +180,8 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 set tags+=$HOME/.vim/tags/python.ctags
 map <silent><C-Left> <C-T>
 map <silent><C-Right> <C-]>
+au FileType python nnoremap <leader>r :!python %<Enter>
+au FileType python nnoremap <leader>t :!green<Enter>
 
 " twitvim
 let twitvim_count = 100
@@ -173,18 +190,19 @@ augroup filetypedetect
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 augroup END
 
-let g:flake8_cmd=$HOME."/.virtualenvs/vim/bin/flake8"
 let g:airline_powerline_fonts = 1
-
-" Anti fuck up spec runner
-nnoremap <leader>s :RunTestFile<cr>
-nnoremap <leader>S :RunNearestTest<cr>
-nnoremap <leader>a :RunAllTests<cr>
 
 " Do not automagically install Go stuff
 let g:go_disable_autoinstall = 1
 
 let g:go_fmt_command = "goimports"
+
+" Some convinience for go stuff
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 " vim slime
 let g:slime_target = "tmux"
@@ -204,7 +222,15 @@ let g:vim_json_syntax_conceal = 0
 autocmd BufWritePre * :%s/\s\+$//e
 
 " elm shortcuts
-nnoremap <leader>el :ElmEvalLine<CR>
+au FileType text nnoremap <leader>el :ElmEvalLine<CR>
 vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
 nnoremap <leader>em :ElmMakeCurrentFile<CR>
 
+" comfortable esc
+inoremap jj <esc>
+
+" RSpec.vim mappings
+au FileType ruby map <Leader>r :call RunCurrentSpecFile()<CR>
+au FileType ruby map <Leader>s :call RunNearestSpec()<CR>
+au FileType ruby map <Leader>l :call RunLastSpec()<CR>
+au FileType ruby map <Leader>a :call RunAllSpecs()<CR>
