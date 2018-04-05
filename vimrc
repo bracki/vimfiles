@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 " list of plugins installed by Vundle
 Bundle 'gmarik/vundle'
-Bundle 'molokai'
+Bundle 'tomasr/molokai'
 Bundle 'ack.vim'
 Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
@@ -71,7 +71,9 @@ filetype plugin indent on
 let mapleader = ","
 let maplocalleader = ","
 set t_Co=256
+set background=dark
 colorscheme molokai
+let g:rehash256 = 1
 "set guifont=DejaVu_Sans_Mono:h9:cANSI
 syntax on
 set ruler
