@@ -1,9 +1,9 @@
 " enter vim mode
 set nocompatible
-" set up Vundle (https://github.com/gmarik/vundle)
+" set up Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 " list of plugins installed by Vundle
 Bundle 'gmarik/vundle'
 Bundle 'molokai'

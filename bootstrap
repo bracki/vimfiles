@@ -21,12 +21,12 @@ install_tmux_conf() {
 install_vim_plugins() {
     echo "--->  Installing Vim plugins"
 
-    local vundle="$HOME/.vim/bundle/vundle"
+    local vundle="$HOME/.vim/bundle/Vundle.vim"
     if [ -d "$vundle" ]; then
         (cd "$vundle"; git pull)
     else
         mkdir -p "$vundle"
-        git clone https://github.com/gmarik/vundle.git "$vundle"
+        (cd "$vundle"; git clone https://github.com/VundleVim/Vundle.vim.git $vundle)
     fi
 
     vim +BundleInstall +qall
