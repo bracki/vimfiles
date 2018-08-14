@@ -168,7 +168,7 @@ let g:rbpt_max = 16
 " Stuff for Python
 "
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-python << EOF
+python3 << EOF
 import os
 import sys
 import vim
