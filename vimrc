@@ -6,10 +6,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " list of plugins installed by Vundle
 Bundle 'gmarik/vundle'
-Bundle 'molokai'
-Bundle 'vim-flake8'
-Bundle 'ctrlp.vim'
-Bundle 'Syntastic'
+Bundle 'tomasr/molokai'
+Bundle 'nvie/vim-flake8'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'fatih/vim-go'
@@ -30,16 +30,17 @@ Bundle 'tpope/vim-leiningen'
 Bundle 'tpope/vim-projectionist'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-fireplace'
-Bundle 'rainbow_parentheses.vim'
+Bundle 'junegunn/rainbow_parentheses.vim'
 
 " SnipMate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/vim-snippets"
 
-Bundle "vim-prometheus"
+" Prometheus
+Bundle "bracki/vim-prometheus"
 
-Bundle "ag.vim"
+Bundle "rking/ag.vim"
 
 Bundle "leafgarland/typescript-vim"
 
