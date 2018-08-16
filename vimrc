@@ -21,6 +21,8 @@ Bundle 'tpope/vim-sensible'
 Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
+Bundle 'ambv/black'
+
 
 " Clojure Plugins
 Bundle 'guns/vim-clojure-static'
