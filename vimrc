@@ -203,6 +203,8 @@ nnoremap <leader>a :RunAllTests<cr>
 " Do not automagically install Go stuff 
 let g:go_disable_autoinstall = 1
 let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+let g:syntastic_go_go_build_args = "-i -buildmode=archive"
 
 " elm specific settings
 let g:elm_format_autosave = 1
