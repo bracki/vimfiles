@@ -44,6 +44,8 @@ Bundle "bracki/vim-prometheus"
 Bundle "rking/ag.vim"
 
 Bundle "leafgarland/typescript-vim"
+Bundle "Shougo/vimproc.vim"
+Bundle "Quramy/tsuquyomi"
 
 Bundle "elmcast/elm-vim"
 
