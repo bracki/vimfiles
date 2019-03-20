@@ -22,6 +22,7 @@ Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'ambv/black'
+Bundle 'PProvost/vim-ps1'
 
 
 " Clojure Plugins
