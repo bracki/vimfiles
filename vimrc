@@ -17,12 +17,14 @@ Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rhubarb'
 Bundle 'tpope/vim-sensible'
 Bundle 'honza/dockerfile.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'elzr/vim-json'
 Bundle 'ambv/black'
 Bundle 'PProvost/vim-ps1'
+Bundle "jxnblk/vim-mdx-js"
 
 
 " Clojure Plugins
