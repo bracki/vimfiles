@@ -8,7 +8,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
 Bundle 'nvie/vim-flake8'
-Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
@@ -132,14 +133,9 @@ nnoremap <silent> <F5> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " --------------------
-" CtrlP
+" FZF
 " --------------------
-let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+nnoremap <leader>t :Files<cr>
 
 " Vim settings for cnext etc.
 map <F2>  :cprev<CR>
